@@ -1,0 +1,249 @@
+用户让我把 HTML 文件发给他，他自己来部署。我需要把 index.html 文件的内容发送给用户。
+
+由于是在群聊中，直接发整个 HTML 文件内容可能会太长。我可以：
+
+把文件内容分段发送
+
+或者告诉用户文件位置让他自己下载
+
+或者生成一个下载链接
+
+最简单的方法是直接把文件内容贴出来，但可能太长。让我先尝试发送文件内容，如果太长就分开发。好的！HTML 文件内容如下 🦐
+
+你可以复制保存为 index.html，然后上传到 GitHub：
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伊朗历史 - 五千年文明古国</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            color: white;
+        }
+        
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .timeline {
+            position: relative;
+            padding: 40px 0;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, #fff, rgba(255,255,255,0.3));
+        }
+        
+        .era {
+            margin-bottom: 50px;
+            position: relative;
+        }
+        
+        .era-content {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            width: 45%;
+            position: relative;
+        }
+        
+        .era:nth-child(odd) .era-content {
+            margin-left: auto;
+            margin-right: 55%;
+        }
+        
+        .era:nth-child(even) .era-content {
+            margin-left: 55%;
+        }
+        
+        .era-dot {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 20px;
+            background: #fff;
+            border-radius: 50%;
+            border: 4px solid #764ba2;
+            top: 30px;
+        }
+        
+        .era h2 {
+            color: #764ba2;
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+        
+        .era-period {
+            color: #999;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+        
+        .era p {
+            color: #555;
+            line-height: 1.8;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 5px solid #764ba2;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: white;
+            opacity: 0.8;
+        }
+        
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 20px;
+            }
+            
+            .era-content {
+                width: calc(100% - 60px);
+                margin-left: 60px !important;
+                margin-right: 0 !important;
+            }
+            
+            .era-dot {
+                left: 20px;
+            }
+            
+            header h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🇮🇷 伊朗历史</h1>
+            <p>具有近五千年历史的文明古国，从波斯帝国到现代伊朗</p>
+        </header>
+        
+        <div class="timeline">
+            <div class="era">
+                <div class="era-dot"></div>
+                <div class="era-content">
+                    <h2>古波斯帝国</h2>
+                    <div class="era-period">公元前550年 - 公元前330年</div>
+                    <p>阿契美尼德王朝建立，居鲁士大帝统一伊朗高原，建立了世界上第一个地跨亚、非、欧三大洲的帝国。大流士一世时期达到鼎盛，修建了著名的御道，实行行省制度。</p>
+                    <div class="highlight-box">
+                        <strong>重要成就：</strong>创立行省制度、修建御道、开凿苏伊士运河前身、尊重各民族宗教文化
+                    </div>
+                </div>
+            </div>
+            
+            <div class="era">
+                <div class="era-dot"></div>
+                <div class="era-content">
+                    <h2>希腊化与帕提亚时期</h2>
+                    <div class="era-period">公元前330年 - 公元224年</div>
+                    <p>亚历山大大帝征服波斯，开启希腊化时代。塞琉古帝国统治后，帕提亚人（安息）崛起，建立帕提亚帝国，成为罗马帝国在东方的强劲对手。</p>
+                    <div class="highlight-box">
+                        <strong>丝绸之路：</strong>帕提亚控制东西方贸易要道，促进了丝绸之路上东西方文明的交流
+                    </div>
+                </div>
+            </div>
+            
+            <div class="era">
+                <div class="era-dot"></div>
+                <div class="era-content">
+                    <h2>萨珊王朝</h2>
+                    <div class="era-period">公元224年 - 651年</div>
+                    <p>阿尔达希尔一世推翻帕提亚，建立萨珊王朝，恢复波斯传统，祆教（拜火教）成为国教。这是伊朗历史上最后一个前伊斯兰时期的伟大王朝，与东罗马/拜占庭帝国长期争霸。</p>
+                    <div class="highlight-box">
+                        <strong>文化贡献：</strong>波斯文学、艺术、建筑达到高峰，创造了独特的波斯-伊斯兰文化基础
+                    </div>
+                </div>
+            </div>
+            
+            <div class="era">
+                <div class="era-dot"></div>
+                <div class="era-content">
+                    <h2>伊斯兰征服与伊朗复兴</h2>
+                    <div class="era-period">公元651年 - 1501年</div>
+                    <p>阿拉伯人征服伊朗，伊斯兰教传入。虽然政治上被统治，但波斯文化顽强存续，并深刻影响了伊斯兰文明。阿拔斯王朝时期，波斯人在政治、文化上重新崛起。</p>
+                    <div class="highlight-box">
+                        <strong>文化融合：</strong>波斯语采用阿拉伯字母，创造新波斯语文学；菲尔多西创作《列王纪》，保存波斯民族记忆
+                    </div>
+                </div>
+            </div>
+            
+            <div class="era">
+                <div class="era-dot"></div>
+                <div class="era-content">
+                    <h2>萨法维王朝</h2>
+                    <div class="era-period">公元1501年 - 1736年</div>
+                    <p>伊斯玛仪一世建立萨法维王朝，确立什叶派十二伊玛目派为国教，奠定现代伊朗国家疆域和宗教基础。阿巴斯大帝时期迁都伊斯法罕，建造了宏伟的伊玛目广场。</p>
+                    <div class="highlight-box">
+                        <strong>建筑瑰宝：</strong>伊斯法罕的伊玛目清真寺、四十柱宫等建筑代表了伊斯兰艺术的巅峰
+                    </div>
+                </div>
+            </div>
+            
+            <div class="era">
+                <div class="era-dot"></div>
+                <div class="era-content">
+                    <h2>近现代伊朗</h2>
+                    <div class="era-period">公元1789年至今</div>
+                    <p>卡扎尔王朝、巴列维王朝相继统治。1925年礼萨·汗建立巴列维王朝，推行现代化改革。1979年伊斯兰革命爆发，建立伊朗伊斯兰共和国。两伊战争（1980-1988）后逐步恢复发展。</p>
+                    <div class="highlight-box">
+                        <strong>当代挑战：</strong>核问题、国际制裁、地区冲突，以及内部改革与保守势力的博弈
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>© 2026 伊朗历史网站 | 数据来源：公开历史资料整理</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">🦐 由 AI 助手小虾米制作</p>
+        </footer>
+    </div>
+</body>
+</html>
